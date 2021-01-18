@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dropdown</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".drop ul li").hover(function () {
+				$(this).find("ul").stop().slideToggle(300, function () {
+					$(this).css("background", "red");
+				});
+
+			});
+		});
+	</script>
+
+</head>
+<style>
+	body{
+		background-color: rgb(43, 138, 221);
+	}
+	.drop{
+		background-color: rgb(2, 18, 27);
+	}
+	@media screen and(max-width:500px) {
+		body{
+			background: blue;
+
+		}
+		.drop{
+			background-color: blue;
+		}
+	}
+</style>
+
+<body>
+	<nav class="drop">
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">Designing</a>
+				<ul>
+					<li><a href="#">html</a></li>
+					<li><a href="#">css</a></li>
+					<li><a href="#">JavaScript</a></li>
+					<li><a href="#">Boostrap</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Development</a>
+				<ul>
+					<li><a href="#">html</a></li>
+					<li><a href="#">css</a></li>
+					<li><a href="#">PHP &amp SQL</a></li>
+					<li><a href="#">Joomla</a></li>
+				</ul>
+			</li>
+			<li><a href="#">graphics</a></li>
+			<li><a href="#">project</a>
+				<ul>
+					<li><a href="#">html</a></li>
+					<li><a href="#">css</a></li>
+					<li><a href="#">PHP SQL</a></li>
+					<li><a href="#">Joomla</a></li>
+				</ul>
+			</li>
+			<li><a href="#">about</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+</body>
+
+</html>
