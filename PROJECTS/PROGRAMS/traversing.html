@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <title>Traversing Property Using Jquery </title>
+    <script>
+        $(document).ready(function () {
+            $('.btn1').click(function () {
+                $('span').parentsUntil('div').css({ 'color': 'red', 'border': '2px solid green' });
+            });
+            $('.btn2').click(function () {
+                var hot = $('span').parents().map(function () {
+                    return this.tagName;
+
+                }).get().join(', ');
+                $('span').before('<h3> ' + hot + '</h3>');
+            });
+        });
+
+    </script>
+    <style>
+        .btn1 {
+            width: 340px;
+            height: 35px;
+            outline: inherit;
+            cursor: pointer;
+            border-radius: 100px;
+            font-size: 20;
+            font-weight: bolder;
+            background-color: oldlace;
+            color: blue;
+        }
+
+        .btn2 {
+            width: 340px;
+            height: 35px;
+            outline: inherit;
+            cursor: pointer;
+            border-radius: 100px;
+            font-size: 20;
+            font-weight: bolder;
+            background-color: oldlace;
+            color: blue;
+        }
+
+        .demo1 * {
+            padding: 5px;
+            margin: 15px;
+            background-color: honeydew;
+            color: black;
+            border: 1px solid deeppink;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TRAVERSING METHOD IN JQUERY</h1>
+    <button class="btn1">traversing</button><br><br><br>
+    <button class="btn2">traversing</button><br><br><br>
+    <div class="demo1">
+        <div style="width: 500px;">Div(great-grand parent)
+            <ul>
+                UI(grand parent)
+                <li>
+                    Li(parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+    </div><br><br><br>
+    <div>
+        <p>
+            <span>I am span and my ancestor are:</span>
+        </p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <title>Chain Method Using Jquery</title>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('.demo1').css('background', 'green').slideUp(2000).slideDown(2000);
+                // we can use the action and method together as css action and slide up slidedown
+            });
+        });
+    </script>
+    <style>
+        .demo1 {
+            height: 300px;
+            width: 300px;
+            background-color: greenyellow;
+            color: black;
+            border-radius: 10px;
+            padding: 16px 30px;
+            font-size: 20px;
+
+        }
+
+        button {
+            width: 340px;
+            height: 35px;
+            outline: inherit;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20;
+            font-weight: bolder;
+
+        }
+
+        @media screen and (max-width: 500px) {
+            .demo{
+                width: 400px;
+                height: 400px;
+                position: relative;
+                left: 100px;
+                border-radius: 10px;
+            }
+            button{
+                width:250px;
+                height: 40px;
+                background-color: brown;
+                color: beige;
+                position: relative;
+                left: 10px;
+
+            }
+            h2{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>A chain Method is diplaying</h1><br><br>
+    <button>Click</button><br>
+    <div class="demo1">
+        <p>Hello Tofik</p>
+    </div>
+</body>
+
+</html>

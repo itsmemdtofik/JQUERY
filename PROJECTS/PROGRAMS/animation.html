@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <title>animation using jquery</title>
+    <script>
+        /* $(document).ready(function () {
+             $("button").click(function () {
+                 $("div").animate({
+                     left: '300px',
+                     opacity: '0.8',
+                     fontSize: '3em',
+                     textColor: 'white',
+                     height: '+=100px',
+                     width: '+=100px'
+ 
+ 
+                 }, "slow");
+             });
+         });*/
+
+        /* $(document).ready(function () {
+             $("button").click(function () {
+                 var div = $("div");
+                 div.animate({ left: '100px' }, "slow");
+                 div.animate({ fontSize: '3em' }, "slow");
+             });
+         });
+         */
+        $(document).ready(function () {
+            $('.button1').click(function () {
+                $('div').slideToggle(5000, function () {
+                    alert('Hello tofik');
+                });
+
+
+            });
+        });
+
+
+    </script>
+    <style>
+        div {
+            width: 430px;
+            height: 460px;
+            background: chartreuse;
+            position: relative;
+            top: 68px;
+            left: 400px;
+            border: 1px solid black;
+
+        }
+
+        .button1 {
+            width: 430px;
+            height: 35px;
+            cursor: pointer;
+            position: absolute;
+            top: 100px;
+            left: 405px;
+            border: none;
+            border-bottom: 1px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">animation using jquery</h2>
+    <input type="button" value="Animation Slide Toggle" class="button1">
+    <div>
+        <p style="text-align: center;">Hello Mohammad Tofik</p>
+    </div>
+
+
+</body>
+
+</html>

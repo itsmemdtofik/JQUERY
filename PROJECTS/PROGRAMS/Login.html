@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e69c745b0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Boostrap Login Form</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background: aliceblue;
+        }
+
+        form {
+            width: 1300px;
+            height: 600px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            background-image: url(image/home.png);
+            border-radius: 10px;
+            box-shadow: 0 0 10px deeppink inset;
+        }
+
+        .submain {
+            width: 400px;
+            height: 500px;
+            background-color: transparent;
+            position: relative;
+            top: 20px;
+            float: right;
+            margin-right: 220px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px darkorchid inset;
+            padding-left: 20px;
+
+
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            color: black;
+            font-size: large;
+            position: relative;
+            text-align: center;
+            top: 10px;
+            font-size: 30px;
+            text-indent: 2px;
+            text-shadow: 0 0 1px black;
+        }
+
+        .font {
+            font-family: cursive;
+            font-size: 30px;
+            font-weight: bolder;
+            position: relative;
+            text-transform: uppercase;
+            text-align: center;
+            top: 2px;
+            color: deeppink;
+            text-shadow: 0 2px deeppink;
+
+        }
+
+        .form-group {
+            position: relative;
+            top: 40px;
+            margin-right: 5px;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            height: 40px;
+            box-shadow: 0 0 3px gray;
+            padding-left: 30px;
+            font-family: monospace;
+            font-size: 20px;
+            color: lime;
+        }
+
+        .btn-primary {
+            width: 350px;
+            height: 45px;
+            position: relative;
+            top: 20px;
+            box-shadow: 0 0 10px black;
+            font-family: sans-serif;
+            font-weight: bolder;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        .btn-dark {
+            width: 350px;
+            height: 45px;
+            position: relative;
+            top: 40px;
+            box-shadow: 0 0 10px gray;
+            font-family: sans-serif;
+            font-weight: bolder;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>WELCOME TO BOOSTRAP PAGE</h1>
+
+        <div class="submain">
+
+            <h2 class="font">LOGIN FORM</h1>
+                <div class="form-group">
+                    <label for="exampleInputEmail1"><b>Email address</b></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted"><b>We'll never share your email with anyone
+                            else.</b></small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"><b>Password</b></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1"><b>Check me out</b></label>
+                </div><br>
+                <button type="submit" class="btn btn-primary">Submit</button><br>
+                <button type="button" class="btn btn-dark">Login</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

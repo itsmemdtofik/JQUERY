@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Slide Property Using Jquery</title>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#flip").css("cursor", "pointer");
+                $("#flip").css("border", "1px solid black");
+                $("#flip").css("background-color", "blue");
+                $("#panel").slideToggle("slow");
+                $("#panel").css("border", "2px solid deeppink")
+            });
+        });
+
+
+    </script>
+    <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            height: 400px;
+            padding: 50px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flip">
+        <h1>Click to slide down panel</h1>
+    </div>
+    <div id="panel">
+        <h2>Hello world!</h2>
+        <img src="image/offline.png" alt="" srcset="" width="400" height="300">
+    </div>
+</body>
+
+</html>

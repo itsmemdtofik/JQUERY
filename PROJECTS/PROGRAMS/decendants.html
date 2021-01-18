@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <title>Descendants Property Using Jquery </title>
+    <script>
+        $(document).ready(function () {
+            $('li.new').next().css({ 'color': 'red', 'border': '2px solid green' });
+            // you can use here siblings() method on the place with next()
+            $('.btn1').click(function () {
+                $('span').each(function () {
+                    // here each() function is performing to get individual length of span tag
+                    alert('The total is->' + $(this).text().length);
+                });
+            });
+        });
+
+    </script>
+    <style>
+        .btn1 {
+            width: 340px;
+            height: 35px;
+            outline: inherit;
+            cursor: pointer;
+            border-radius: 100px;
+            font-size: 20;
+            font-weight: bolder;
+            background-color: oldlace;
+            color: blue;
+        }
+
+        .btn2 {
+            width: 340px;
+            height: 35px;
+            outline: inherit;
+            cursor: pointer;
+            border-radius: 100px;
+            font-size: 20;
+            font-weight: bolder;
+            background-color: oldlace;
+            color: blue;
+        }
+
+        .descendants * {
+            padding: 5px;
+            margin: 15px;
+            background-color: honeydew;
+            color: black;
+            border: 1px solid deeppink;
+            display: block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Descendants METHOD IN JQUERY</h1>
+    <div class="descendants">Body-(great-grand parent)
+        <div style="width: 500px;">Div(grand parent)
+            <ul>
+                UI(direct parent)
+                <li>
+                    Li(child)
+                </li>
+                <li>
+                    Li(child)
+                </li>
+                <li class="new">
+                    Li(child)
+
+                </li>
+            </ul>
+        </div>
+    </div><br><br><br>
+    <button class="btn1">Click here to get Length </button><br><br><br>
+    <span>I am Mohammad</span>
+    <span> Mohammad</span>
+    <span>I am Mohammad</span>
+
+</body>
+
+</html>

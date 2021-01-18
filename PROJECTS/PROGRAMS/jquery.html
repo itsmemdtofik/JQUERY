@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <title>Mouseleave/Mouseenter</title>
+    <script>
+        $(document).ready(function () {
+            $('.div').mouseenter(function () {
+                $('.div').stop().animate({
+                    left: '340px',
+                    fontSize: '20px',
+                    borderRadius: '10px'
+                });
+            });
+
+            $('.div').mouseleave(function () {
+                $('.div').stop().animate({
+                    left: '0px',
+                    fontSize: '20px',
+                });
+                $('.div').css("background-color", "blue");
+                $('h3').css("color", "white");
+
+            });
+            $('.demo1').click(function () {
+                alert("Hii Mohammad tofik");
+            });
+            $('button').click(function () {
+                var div = $('.demo2');
+                div.animate({ height: 300 }, 2000);
+                div.animate({ width: 300 }, 2000);
+                div.animate({ height: 100 }, 2000);
+                div.css("background-color", "yellow");
+                div.animate({ width: 100 }, 2000);
+                $('span').text(div.queue().length);
+            });
+
+            $('.submit').click(function () {
+                $('.demo3').slideToggle(5000, function () {
+                    alert("Are you sure you want to close");
+                });
+
+
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="animate" class="new">
+    <input type="button" value="slideDown" class="new1">
+    <input type="button" value="slideToggle" class="new2">
+    <input type="button" value="stop" class="new3"><br>
+    <div class="div" style="width: 200px;height: 200px; background-color: purple; position:relative;">
+        <h3>Hello tofik</h3>
+    </div>
+
+    <div class="demo1" style="width: 200px;cursor:pointer;height: 200px;background-color: chartreuse;">
+        <h2>click here to show notification</h2>
+    </div><br>
+
+
+    <button>Click To show Queue</button>
+    <h3>The Queue Property</h3>
+    <p>The Queue length is== <span></span> </p>
+    <div class="demo2" style="width: 50px; height: 50px;position: relative;background: red;">
+    </div><br>
+
+
+    <h3>Callback Function property</h3>
+    <input type="submit" value="submit" class="submit">
+    <div class="demo3" style="width: 200px; height: 200px; background: lightblue;">
+        <p>Hello World</p>
+    </div>
+
+</body>
+
+</html>

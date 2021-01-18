@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <title>Using html/css in jquery</title>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('p').css('border-width', function (i) {
+                    return i + 10;
+                });
+            });
+        });
+    </script>
+    <style>
+        button {
+            width: 340px;
+            height: 35px;
+            outline: inherit;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20;
+            font-weight: bolder;
+            background-color: oldlace;
+            color: blue;
+            font-family: 'Courier New', Courier, monospace;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML and CSS in Jquery</h1>
+    <button>Click</button><br><br><br><br>
+    <p style="border:1px solid blue;">Hello Tofik</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <title>Scroll Property Using Jquery </title>
+    <script>
+        $(document).ready(function () {
+            $('.btn1').click(function () {
+             $('div').scrollLeft(700);
+            });
+            $('.btn2').click(function(){
+                $('p').wrap(function(){
+                    return '<div></div>';
+                });
+                //you can use qrap() and text() method like this
+            });
+        });
+
+    </script>
+    <style>
+        .btn1 {
+            width: 340px;
+            height: 35px;
+            outline: inherit;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20;
+            font-weight: bolder;
+            background-color: oldlace;
+            color: blue;
+        }
+        .btn2{
+            width: 340px;
+            height: 35px;
+            outline: inherit;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20;
+            font-weight: bolder;
+            background-color: oldlace;
+            color: blue;
+        }
+        div{
+            
+            height: 220px;
+            width: 60px;
+            background-color: navy;
+            border: 1px solid black;
+            padding-left: 10px;
+            color: white;
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Scroll Property Using Jquery</h1>
+    <button class="btn1">Scroll</button><br><br><br>
+    <button class="btn2">TEXT / HTML</button><br><br><br>
+    <div>
+        Hello Mohammad How are you.<br>I am fine .What about you.
+        what are you doing and how is your family
+    </div><br><br>
+    <p>Hello to mohammad</p><br><br><br>
+    <p>Hello to irfan</p>
+    
+
+</body>
+
+</html>
