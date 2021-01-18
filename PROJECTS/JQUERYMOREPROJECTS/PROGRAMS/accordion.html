@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jss/function.js"></script>
+    <script src="jss/jquery-3.5.1.min.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Accordian Menu </title>
+    <script>
+        $(document).ready(function () {
+            $('#sub_accordion').draggable();
+            $('#accordion').accordion({
+                icons: {
+                    'header': 'ui-icon-plus',
+                    'activeHeader': 'ui-icon-minus'
+                },
+                collapsible: true, active: 0,
+                event: 'click'
+            });
+            $('#sub_accordion').accordion({
+                icons: {
+                    'header': 'ui-icon-plus',
+                    'activeHeader': 'ui-icon-minus'
+                },
+                collapsible: true, active: 0,
+                event: 'click'
+            });
+
+        });
+    </script>
+    <style>
+        .ui-accordion .ui-accordion-header {
+            background-color: deeppink;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            width: 400px;
+            outline: none;
+            border: 2px solid navajowhite;
+            display: block;
+
+
+        }
+
+        .ui-accordion .ui-accordion-content {
+            width: 338px;
+            position: relative;
+            background-color: antiquewhite;
+            color: black;
+            box-shadow: 0 0 5px deeppink inset;
+            border-top-color: 2px solid blue;
+
+        }
+
+        a:hover {
+
+            color: deeppink;
+            height: 40px;
+
+        }
+
+        hr {
+            height: 0.1px;
+
+        }
+
+        #sub_accordion {
+            position: absolute;
+            top: 10px;
+            right: 450px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="accordion">
+        <h3>Web Designing</h3>
+        <div class="div1">
+            <a href="" style="text-decoration: none;">+ Click Here To get HtmlPAge</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+        </div>
+
+        <h3>Editing photoshop</h3>
+        <div class="div2">
+            <a href="" style="text-decoration: none;">+ Click Here To get HtmlPAge</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+        </div>
+        <h3>Learning Java Tutorials</h3>
+        <div><a href="" style="text-decoration: none;">+ Click Here To get HtmlPAge</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray"> <br>
+
+        </div>
+
+    </div>
+    <div id="sub_accordion">
+        <h3>Web Designing</h3>
+        <div>
+            <a href="" style="text-decoration: none;">+ Click Here To get HtmlPAge</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+        </div>
+
+        <h3>Editing photoshop</h3>
+        <div>
+            <a href="" style="text-decoration: none;">+ Click Here To get HtmlPAge</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+        </div>
+        <h3>Learning Java Tutorials</h3>
+        <div><a href="" style="text-decoration: none;">+ Click Here To get HtmlPAge</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray">
+            <a href="" style="text-decoration: none;">+ Click here to know HTML</a>
+            <hr color="gray"> <br>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

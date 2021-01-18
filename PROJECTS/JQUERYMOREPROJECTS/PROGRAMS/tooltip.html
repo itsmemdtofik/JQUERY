@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery-3.5.1.min.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>tooltip</title>
+    <script>
+        $(document).ready(function () {
+            $(document).tooltip({
+                track: true,
+                show: { effect: 'bounce', delay: 100 },
+                // effect eexplode,bounce,blind,clip you can use
+            });
+
+        });
+    </script>
+    <style>
+        body {
+            background-color: rgb(235, 163, 19);
+        }
+
+        p {
+            font-size: 20px;
+            font-family: consolas;
+        }
+
+        .ui-tooltip {
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            width: 500px;
+            border-radius: 100px;
+            box-shadow: 0 0 15px black;
+            text-align: center;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Tool Tip using jquery</h2>
+    <p title="Hello Mohammad">More video courses visit my <a href="https://www.google.com/"
+            title="https://www.google.com">site</a></p>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jss/function.js"></script>
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Autocomplete</title>
+    <script>
+        var course = ['HTML', 'HTML5', 'CSS', 'CSS3', 'JAVASCRIPT', 'JAVA', 'WORDPRESS', 'JQUERY', 'PHP'];
+        /* var course = [
+             { value: "HTML", label: "Free courses avalable on google" },
+             { value: "PHP", label: "Free courses avalable on google" },
+             { value: "JAVA", label: "Free courses avalable on google" },
+             { value: "JQUERY", label: "Free courses avalable on google" },
+             { value: "CSS", label: "Free courses avalable on google" }
+         ];*/
+
+        $(document).ready(function () {
+            $('#v_course').autocomplete({
+                source: course,
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $(this).val(ui.item.label);
+                    $('#value').val(ui.item.value);
+                }
+                // disabled:true you can use for disabling this event
+            });
+            $('#btn1').button({ icons: { secondary: "ui-icons-minus" } });
+            $('a').button();
+        });
+    </script>
+    <style>
+        .ui-button {
+            background: purple;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .ui-button:hover {
+            background-color: magenta;
+        }
+
+        .ui-button:active {
+            background: black;
+            color: white;
+            outline: inherit;
+        }
+        a{
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Autocomplete Using Jquery</h2><br><br>
+    <input type="text" id="v_course" placeholder="Enter the Course"><br><br>
+    <button id="btn1">Click Me!</button>
+    <a href="#">My site</a>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery-3.5.1.min.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Draggable</title>
+    <script>
+        $(document).ready(function () {
+            $('#drag').draggable({
+                cursor: 'pointer', containment: 'window',
+                opacity: 5,revert:true,revertDuration:1000,
+                start:function(){
+                    $('.text').text('Dragging Started');
+                },
+                drag:function(){
+                    $('.text').text('Dragging',4000);
+                },
+                stop:function(){
+                    $('.text').text('Dragging stoped');
+                },
+
+            });//axis:'y' you can use,scroll:false
+            //containment: 'parent','document','window' you can use
+
+
+        });
+    </script>
+    <style>
+        body {
+            background: ghostwhite;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: green;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            left: 40%;
+            box-shadow: 0 0 10px blue;
+            border-radius: 10px;
+        }
+
+        .main {
+            width: 500px;
+            height: 400px;
+            background: black;
+            box-shadow: 0 0 250px red inset;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        .text{
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Draggable Using Jquery</h2><br><br>
+    <div class="main">
+        <img src="img/cloud1.png" alt="" srcset="" id="drag">
+    </div><br>
+    <div class="text"></div>
+</body>
+
+</html>

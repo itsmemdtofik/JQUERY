@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Resizable</title>
+    <style>
+        body {
+            background-color: darkseagreen;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: white;
+        }
+
+        #resize {
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+            background-color: aqua;
+            box-shadow: 0 0 230px deeppink inset;
+        }
+
+        #main>img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px deeppink;
+
+        }
+        #main{
+            text-align: center;
+        }
+        #parent{
+            height: 600px;
+            width: 700px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Resizable Using Jquery</h2><br><br>
+    <div id="parent">
+        <div id="resize">
+            <div id="main">
+                <img src="img/cloud1.png" alt="" srcset="" class="img_drag">
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#resize').draggable();
+            $('#resize').resizable({
+                autoHide: true,
+                animate: true,
+                ghost: true,
+                animateDuration: 2000,
+                animateEasing: 'linear',
+                //aspectRatio:9/10,
+                // handles:'n,e,w,s', 
+                //grid:[50,50],
+                // maxWidth:500,
+                // maxHeight:400,
+                // minWidth:300,
+                // minHeight:200,
+                containment:'parent'
+            });
+            $('.img_drag').draggable({
+                
+            });
+        });
+    </script>
+</body>
+
+</html>

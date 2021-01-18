@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>DialogBox</title>
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function () {
+                $('#dialog').attr('title', 'welcome').text('https://www.google.com/').dialog({
+                    buttons: {
+                        'OK': function () {
+                            //alert('Thanks for visiting my site');
+                            $(this).dialog('close');
+
+                        }
+                    },
+                    closeOnEscape: true,
+                    draggable: false,
+                    resizable: false,
+                    show: 'blind',//bounce, explode, you can use
+                    hide: 'explode',
+                    modal: true,
+                    
+                });
+            });
+            $('#btn1').button();
+
+        });
+    </script>
+    <style>
+        body {
+            background: gainsboro;
+        }
+
+        .ui-button {
+            background: blue;
+            border-radius: 100px;
+            color: black;
+            outline: inherit;
+        
+        }
+        .ui-button:hover{
+            background-color: orange;
+            color: aliceblue;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <h3>DialogBox</h3><br><br>
+    <input type="button" value="Click me to open Dialog Box" id="btn1">
+    <div id="dialog"></div>
+</body>
+
+</html>

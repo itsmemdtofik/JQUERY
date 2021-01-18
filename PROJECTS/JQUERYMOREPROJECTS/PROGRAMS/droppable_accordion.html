@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Droppable Accordion</title>
+    <style>
+        body {
+            background: deepskyblue;
+      
+        }
+
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: ghostwhite;
+        }
+
+        .ui-accordion {
+            width: 300px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: black;
+            font-weight: bolder;
+
+        }
+
+        #course {
+            width: 300px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: black;
+            font-weight: bolder;
+            padding-left: 30px;
+            border-radius: 10px;
+        }
+
+        #drop {
+            width: 400px;
+            margin-top: 1em;
+            float: right;
+            background: antiquewhite;
+            position: absolute;
+            top: 110px;
+            right: 400px;
+            border-radius: 20px;
+
+        }
+
+        #drop ol {
+            margin: 0;
+            padding: 1em 0 1em 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Droppable Accordion Using jquery</h1><br><br>
+    <div id="course">
+        <h2>Web Designing</h2>
+        <div id="name">
+            <h2><a href="#">Web Designing</a></h2>
+            <div>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>BOOSTRAP</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+            <h2><a href="#">Web Development</a></h2>
+            <div>
+                <ul>
+                    <li>JAVA</li>
+                    <li>PHP</li>
+                    <li>WORDPRESS</li>
+                    <li>Joomla</li>
+                </ul>
+            </div>
+            <h2><a href="#">Projects</a></h2>
+            <div>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Php</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="drop">
+        <h2>Your Courses</h2>
+        <div class="ui-sidget-content">
+            <ol>
+                <li>Add Your Courses Here</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#name').accordion();
+            $('#name li').draggable({
+                appendTo: 'body',
+                helper: 'clone',
+                cursor:'pointer',
+            });
+            $('#drop ol').droppable({
+                activeClass: 'ui-state-default',
+                hoverClass: 'ui-state-hover',
+                accept: ':not(.ui-sortable-helper)',
+                drop: function (event, ui) {
+                    $(this).find('.placeholder').remove();
+                    $('<li></li>').text(ui.draggable.text()).appendTo(this);
+                }
+            }).sortable({
+                items:'li:not(.placeholder)',
+                sort:function(){
+                    $(this).removeClass('ui-state-default');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

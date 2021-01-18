@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Droppable </title>
+    <style>
+        body {
+            background: seashell;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: green;
+        }
+
+
+
+        #draggable {
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 0 10px blue;
+            border-radius: 20px;
+        }
+
+        #droppable {
+            width: 200px;
+            height: 200px;
+            background: deepskyblue;
+            border-radius: 20px;
+            box-shadow: 0 0 10px black inset;
+            padding-top: 50px;
+            padding-left: 40px;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: black;
+            font-weight: bolder;
+        }
+        .udroppable{
+            width:200px;
+            height: 200;
+            background: firebrick;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Droppable Using Jquery</h2><br><br>
+    <img src="img/cloud1.png" alt="" srcset="" id="draggable"><br><br>
+    <div id="droppable">
+        <p>Drop Anywhere</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#draggable').draggable();
+            $('#droppable').droppable({
+                tolerance: 'touch',// you can use tolerance:'fit','touch','pointer'
+                drop: function (event, ui) {
+                    // alert('Dropped');
+                    $(this).addClass('udroppable').find('p').html('Dropped');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

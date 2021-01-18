@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Menu Jquery</title>
+    <script>
+        $(document).ready(function () {
+            $('#menu').menu({
+                icons: { submenu: 'ui-icon-plus' }
+            });
+
+        });
+    </script>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: green;
+        }
+
+        .ui-menu {
+            width: 200px;
+            border-radius: 10px;
+            background-color: azure;
+            color: black;
+            box-shadow: 0 0 10px black;
+            padding: 30px 20px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: black;
+            font-weight: bold;
+        }
+
+        .ui-menu-item:hover {
+            background: greenyellow;
+            color: black;
+        }
+
+        .ui-manu-divider {
+            color: black;
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>--- Drop Grag Menu ---</h2><br>
+    <div id="menu">
+        <li>Web Designing
+            <ul>
+                <li>HTML</li>
+                <li>JQUERY</li>
+                <li>BOOSTRAP</li>
+                <li>CSS</li>
+            </ul>
+        </li>
+        <div id="ui-menu-divider"></div>
+        <li>Web Development
+            <ul>
+                <li>JavaScript</li>
+                <li>PHP &amp; MySql
+                    <ul>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                    </ul>
+                </li>
+                <li>Wordpress</li>
+                <li>Joomla</li>
+            </ul>
+        </li>
+        <div id="ui-menu-divider"></div>
+        <li>Projects
+            <ul>
+                <li>JavaScript</li>
+                <li>PHP &amp; MySql</li>
+                <li>Wordpress</li>
+                <li>Joomla</li>
+            </ul>
+        </li>
+        <div id="ui-menu-divider"></div>
+        <li>Tips</li>
+    </div>
+</body>
+
+</html>

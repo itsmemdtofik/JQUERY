@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Jquery Tabs</title>
+    <script>
+        $(document).ready(function () {
+            $('#tab').tabs({
+                //event:'mouseover',
+                collapsible: true,
+                // active:2,
+                //disabled:[0,3],//true,
+                show: { effect: 'clip', duration: 500 },//you can use bounce,explode,blind,slide
+                hide: { effect: 'slide', duration: 500 },
+            }).find('.ui-tabs-nav').sortable({ axis: 'x' });
+
+        });
+    </script>
+    <style>
+        body {
+            background:  seashell;
+            color: black;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .ui-tabs {
+            width: 700px;
+            height: 400px;
+            background: black;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0 0 10px black;
+            position: relative;
+            left: 300px;
+        }
+
+        .ui-tabs-nav {
+            background: transparent;
+            border-radius: 10px;
+            border:1px solid deeppink;
+            border-radius: 10px;
+        }
+        .ui-tabs .ui-tabs-nav li{
+            border-radius: 10px;
+            background-color: deeppink;
+            position: relative;
+            top: -2px;
+            height: 40px;
+        }
+        .ui-tabs .ui-tabs-nav li.ui-tabs-active{
+            background-color: blue;
+            color: white;
+          
+           
+        }
+    </style>
+</head>
+
+<body>
+    <h4>JQUERY TABS</h4><br><br>
+    <div id="tab">
+        <ul>
+            <li><a href="#design">web Designing</a></li>
+            <li><a href="#develop">Web Development</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="design">
+            <h2>Web Designing Page</h2>
+            <p>Hello Mohammad</p>
+            <img src="img/cloud1.png" alt="" srcset="" width="50" height="50">
+        </div>
+        <div id="develop">
+            <h2>Web Development Page</h2>
+            <p>Hello Mohammad</p>
+        </div>
+        <div id="project">
+            <h2>Here So Many Projects</h2>
+            <p>HTML CSS PHP ASP JAVA ON.</p>
+        </div>
+        <div id="contact">
+            <h2>Contact Page</h2>
+            <p>Hello Mohammad</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

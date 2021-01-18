@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Slider</title>
+    <script>
+        $(document).ready(function () {
+            $('#slider').slider({
+                min: 5, max: 500,// step: 10,
+                range: true, values: [100, 300],
+                //  orientation:'vertical',
+                slide: function (event, ui) {
+                    $('#price').html('&#x20b9;' + ui.value);//s[0]+'&#x20b9;'+ui.values[1]);
+
+                },
+                stop: function (event, ui) {
+                    alert('You selected Rs' + ui.value);
+
+                }
+            });
+        })
+    </script>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+
+        .ui-slider {
+            background: black;
+
+        }
+
+        #price {
+            font-size: 20px;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 style="font-family:'Courier New', Courier, monospace,sans-serif;font-size: 20px;">Making Slider Using Jquery
+    </h4><br><br>
+    <div id="slider"></div><br><br><br><br>
+    <div id="price"></div>
+</body>
+
+</html>

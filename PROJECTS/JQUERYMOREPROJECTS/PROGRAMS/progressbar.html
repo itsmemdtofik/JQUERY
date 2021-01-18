@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Progress Baar</title>
+    <script>
+        $(document).ready(function () {
+            var progressbar = $('#progressbar'),
+                progressLabel = $('.progress-label');
+
+            progressbar.progressbar({
+                value: false,
+                change: function () {
+                    progressLabel.text(progressbar.progressbar("value") + "%");
+                },
+                complete: function () {
+                    progressLabel.text('Downloaded Successfully');
+                }
+            });
+            function progress() {
+                var val = progressbar.progressbar('value');// zero starting point
+                progressbar.progressbar('value', val + 1);
+                if (val < 99) {
+                    setTimeout(progress, 2000);
+                }
+            }
+            setTimeout(progress, 2000);
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: azure;
+            padding-top: 100px;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: green;
+        }
+
+        .ui-progressbar {
+            background-color: antiquewhite;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .progress-label {
+            position: absolute;
+            margin-left: 50%;
+            color: black;
+            padding-top: 5px;
+        }
+
+        .ui-progressbar-value {
+            background: gold;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Progress Bar</h2><br>
+    <div id="progressbar">
+        <div class="progress-label">Loading...</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Select Menu</title>
+    <script>
+        $(document).ready(function () {
+            $('#select_menu').selectmenu({
+                width:200,
+                icons:{ button: 'ui-icon-circle-plus'}
+            });
+        });
+    </script>
+    <style>
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: green;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h2>Select Menu</h2>
+    <select name="" id="select_menu">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JAVA">JAVA</option>
+        <option value="JQUERY">JQUERY</option>
+        <option value="JAVASCRIPT">JAVASCRIPT</option>
+    </select>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="jss/jquery.js"></script>
+    <script src="jss/jquery-ui.js"></script>
+    <title>Selectable</title>
+    <style>
+        body {
+            background-color: darkcyan;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: white;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+        }
+
+        #selectable {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 220px;
+        }
+
+        #selectable li {
+            margin: 5px;
+            padding: 6px;
+            font-size: 20px;
+            line-height: 10px;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: blue;
+            cursor: pointer;
+            border-radius: 20px;
+
+        }
+
+        #selectable .ui-selecting {
+            background: greenyellow;
+        }
+
+        #selectable .ui-selected {
+            background-color: aqua;
+            color: red;
+
+        }
+
+        #selected {
+            background: floralwhite;
+            color: black;
+            width: 200px;
+            height: 200px;
+            padding: 20px 30px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            color: blue;
+            cursor: pointer;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Selectable Using Jquery</h2><br>
+    <img src="img/cloud1.png" alt="" srcset="">
+    <ul id="selectable">
+        <li class="ui-widget-header">CSS</li>
+        <li class="ui-widget-header">HTML 5</li>
+        <li class="ui-widget-header">WORDPRESS</li>
+        <li class="ui-widget-header">JAVA</li>
+        <li class="ui-widget-header">JQUERY</li>
+        <li class="ui-widget-header">PYTHON</li>
+    </ul><br>
+    <br>
+    <div id="selected"></div>
+    <script>
+        $(document).ready(function () {
+            $('#selectable').selectable({
+                // disabled:true,
+                //tolerance:'touch',
+                //tolerance:'fit',
+                stop: function () {
+                    var selected = '';
+                    $('.ui-selected').each(function () {
+                        selected += $(this).text() + '<br>'
+                    });
+                    $('#selected').html(selected);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
